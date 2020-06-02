@@ -12,28 +12,20 @@ public class Classes {
     {
         //Criando objeto caneta azul
         Caneta c1 = new Caneta();
-        c1.cor = "Azul";
-        c1.ponta = 0.5f;
-        //c1.tampada = false;
         
-        System.out.println("Criado objeto caneta azul");
-        c1.destampar();
+        c1.modelo = "Bic Cristal";
+        c1.cor = "Azul";
+        c1.carga = 80;
+        c1.tampada = false;
+        
+        //ponta tem acesso privado. Dá erro
+        //c1.ponta = 0.5f;
+        //c1.tampada = false;
+     
         c1.status();
         c1.rabiscar();
-          
-        //Imprime para pular uma linha
-        System.out.println();
-        
-        //Criando objeto caneta verde
-        Caneta c2 = new Caneta();
-        c2.cor = "Verde";
-        c2.ponta = 0.7f;
-        //c2.tampada = true;
-        
-        System.out.println("Criado objeto caneta verde");
-        c2.tampar();
-        c2.status();
-        c2.rabiscar();
+        c1.tampar();
+        System.out.println("Agora a sua caneta está: " + c1.tampada);
     }
     
 }

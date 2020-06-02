@@ -9,11 +9,11 @@ package classes;
 public class Caneta 
 {
     //declaração dos atributos
-    String modelo;
-    String cor;
-    float ponta;
-    int carga;
-    boolean tampada;
+    public String modelo;
+    public String cor;
+    private float ponta;
+    protected int carga;
+    protected boolean tampada;
     
     //status
     void status()
@@ -26,7 +26,7 @@ public class Caneta
     }
     
     //métodos
-    void rabiscar()
+    public void rabiscar()
     {
         if(tampada == true)
         {
@@ -38,12 +38,12 @@ public class Caneta
         }
     }
     
-    void tampar()
+    protected void tampar()
     {
         this.tampada = true;
     }
     
-    void destampar()
+    protected void destampar()
     {
         this.tampada = false;
     }
